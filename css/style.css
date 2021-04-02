@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all ease-in-out 250ms;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container1 {
+  width: 95%;
+  margin: 0 auto;
+}
+.container2 {
+  width: 100%;
+  max-width: 70em;
+  margin: 0 auto;
+}
+
+/* column system */
+[class^="col-"] {
+  width: 100%;
+  margin-top: 1em;
+}
+
+[class^="col-"] :first-child {
+  margin-top: 0;
+}
+
+.col-1 {
+  width: 33.33%;
+  float: left;
+}
+
+@media (min-width: 40rem) {
+  [class^="col-"] {
+    float: left;
+    padding: 0.5em;
+  }
+
+  [class^="col-"] :first-child {
+    padding-left: 0;
+  }
+
+  [class^="col-"] :first-child {
+    padding-right: 0;
+  }
+
+  .col-3 {
+    width: 50%;
+  }
+
+  .col-1 {
+    width: 16.66%;
+  }
+}
+
+.clearfix::after,
+section::after,
+footer::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media (min-width: 60rem) {
+  .container2 {
+    width: 90%;
+    max-width: 70em;
+    margin: 0 auto;
+  }
+}
+
+/* section {
+  /* border: 2px solid yellow; 
+}*/
+
+/* ***********typography************ */
+
+h1 {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-top: 1em;
+}
+
+.title span {
+  font-weight: 300;
+  display: block;
+  font-size: 0.9em;
+}
+
+.title-cta {
+  margin: 0 0 0.5em;
+}
+
+.unstyled-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 60rem) {
+  .title {
+    font-size: 3rem;
+  }
+}
+/* buttons */
+
+.button {
+  display: inline-block;
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  padding: 0.5em 1.75em;
+}
+
+@media (min-width: 60rem) {
+  .button {
+    font-size: 1.5rem;
+  }
+}
+
+.button-small {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.button-accent {
+  color: #00ff6c;
+  border-color: #00ff6c;
+}
+
+.button-accent:hover,
+.button-accent:focus {
+  background: #00ff6c;
+  color: #232323;
+}
+
+.button-dark {
+  color: #232323;
+  border-color: #232323;
+}
+
+.button-dark:hover,
+.button-dark:focus {
+  color: #ffff;
+  background: #232323;
+}
+/************* header **************/
+
+header {
+  position: absolute;
+  margin: 1em;
+  left: 0;
+  right: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin: 1em;
+}
+
+nav a {
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 0.5em;
+  font-size: 1rem;
+}
+
+@media (min-width: 60rem) {
+  .logo {
+    float: left;
+  }
+  nav {
+    float: right;
+  }
+}
+
+/* **********home-hero*********** */
+
+.home-hero {
+  background: url("../img/hero-bg.jpg");
+  padding: 10em 0;
+  color: #ffff;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 60rem) {
+  .home-hero {
+    height: 100vh;
+    padding: 35vh;
+  }
+}
+
+/* ********** home-about************** */
+
+.home-about-textbox {
+  background-color: #232323;
+  padding: 4em;
+  padding-top: 6em;
+  outline: 2px solid #00ff6c;
+  outline-offset: -2.5em;
+  color: #ffff;
+  position: relative;
+}
+
+.home-about-textbox h1 {
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  transform: translate(-50%);
+  background: #232323;
+  padding: 0.25em;
+}
+
+@media (min-width: 25rem) {
+  h1 {
+    font-size: 2rem;
+  }
+  .home-about-textbox h1 {
+    top: 0.2em;
+  }
+}
+
+@media (min-width: 60rem) {
+  .home-about {
+    background-image: url(../img/who-we-are.jpg);
+
+    padding-bottom: 25em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .home-about-textbox {
+    padding: 5em;
+    position: absolute;
+    top: -5em;
+    left: -2em;
+    width: 45%;
+    box-shadow: 0 0 4em 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ******portfolio************ */
+
+.port-item {
+  margin: 0;
+  position: relative;
+}
+
+.port-item img {
+  display: block;
+}
+.portfolio {
+  margin: 3em 0 0;
+}
+
+.prot-desc {
+  position: absolute;
+  z-index: 100;
+  bottom: 0em;
+  left: 0;
+  right: 0;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1em;
+}
+
+.prot-desc p {
+  margin: 0;
+}
+
+@media (min-width: 35rem) {
+  .port-item {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media (min-width: 60rem) {
+  .port-item {
+    width: 33.333%;
+    float: left;
+    overflow: hidden;
+  }
+
+  .prot-desc {
+    transform: translateY(150%);
+  }
+
+  .port-item:hover .prot-desc {
+    transform: translateY(0%);
+  }
+}
+
+.cta {
+  background-color: #00ff6c;
+  padding: 3em 0;
+}
+
+/* ********footer************ */
+footer {
+  background: #232323;
+  color: #fff;
+  text-align: left;
+  padding: 5em 0;
+}
